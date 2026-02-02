@@ -33,6 +33,7 @@ class bstree
 	int getMin();
 	int taller();
 	void printBST(); //user called
+	bool isBalanced(); //checks if tree is balanced
  private:
 	void insert(treenode *t, int x);
 	bool searchI(int x);
@@ -46,5 +47,6 @@ class bstree
 	int getMin(treenode *t);
 	void printBST(treenode *i, int depth); //called from printBST() without params
 	treenode *root;
+
 };
 

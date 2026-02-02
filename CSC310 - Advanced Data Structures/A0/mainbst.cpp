@@ -72,6 +72,9 @@ int main(int argc, char *argv[])
 				fscanf(fp, "%d", &readNum);
 				t.height(readNum);
 				break;
+			case 11: //check if tree is balanced
+				t.isBalanced();
+				break;
 			default: //Default Message
 				cout << "Command " << readNum << " not recognized." << endl;
 		}

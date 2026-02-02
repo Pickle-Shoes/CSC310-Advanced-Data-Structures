@@ -346,7 +346,6 @@ int bstree::height(treenode *t)
 	else
 		return 1 + hR;
 
-	
 }
 
 void bstree::height(int x){ //returns height from a specific node
@@ -390,4 +389,23 @@ int bstree::getMin(treenode *walk)
 	remove(save);	//Calls the remove function to remove the smallest node from the tree.
 
 	return save;
+}
+
+bool bstree::isBalanced(){
+	int lHeight = height(root->lchild);
+	int rHeight = height(root->rchild);
+
+	if(rHeight == lHeight){
+		cout << "Tree is balanced" << endl;
+		return true;
+	}
+	else if(rHeight -1 == lHeight || rHeight == lHeight -1){
+		cout << "Tree is balanced" << endl;
+		return true;
+	}
+	else{
+		cout << "Tree is not balanced" << endl;
+		return false;
+	}
+
 }
