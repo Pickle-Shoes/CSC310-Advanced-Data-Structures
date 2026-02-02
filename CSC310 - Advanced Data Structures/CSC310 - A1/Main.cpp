@@ -1,4 +1,4 @@
-#include "bstA.h"
+#include "bstHeader.h"
 
 int main(int argc, char* argv[]){
     if(argc != 2){
