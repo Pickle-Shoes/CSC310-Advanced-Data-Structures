@@ -143,10 +143,7 @@ void bstree::remove(int val)
 		else
 		{
 			root->dat = getMin(root->rchild);
-			/*root = makeatreenode(getMin(walk->rchild));
-			root->lchild = walk->lchild;
-			root->rchild = walk->rchild;
-			delete walk;*/
+		
 		}
 		return;
 	}
@@ -162,8 +159,6 @@ void bstree::remove(int val)
 			if(walk->rchild->dat == val)
 				break;
 
-		//if(walk->lchild->dat == val || walk->rchild->dat == val)
-			//break;
 
 		if(val < walk->dat)
 			walk = walk->lchild;
@@ -174,13 +169,7 @@ void bstree::remove(int val)
 	if(walk == NULL)
 		return;
 
-	//if(walk->lchild != NULL)
-		//if(walk->lchild->dat !=val)
-			//return;
-
-	//if(walk->rchild != NULL)
-		//if(walk->rchild->dat != val)
-			//return;
+	
 
 	treenode *tmp = walk;
 
@@ -205,10 +194,7 @@ void bstree::remove(int val)
 		else
 		{
 			tmp->dat = getMin(tmp->rchild);
-			/*walk->lchild = makeatreenode(getMin(tmp->rchild));
-			walk->lchild->lchild = tmp->lchild;
-			walk->lchild->rchild = tmp->rchild;
-			delete tmp;*/
+			
 		}
 	}
 	else
@@ -232,10 +218,7 @@ void bstree::remove(int val)
 		else
 		{
 			tmp->dat = getMin(tmp->rchild);
-			/*walk->rchild = makeatreenode(getMin(tmp->rchild));
-			walk->rchild->lchild = tmp->lchild;
-			walk->rchild->rchild = tmp->rchild;
-			delete tmp;*/
+			
 		}
 	}
 }
@@ -320,8 +303,7 @@ int bstree::height(treenode *t)
 	else
 		return 1 + hR;
 
-	//return 1 + max(hL,hR);
-	//return 1 + hL>hR?hL:hR;
+	
 }
 
 int bstree::taller()
