@@ -32,6 +32,7 @@ class bstree
 	int height( int x ); // returns the height of a specific node
 	int getMin();
 	int taller();
+	void printBST(); //user called
  private:
 	void insert(treenode *t, int x);
 	bool searchI(int x);
@@ -42,6 +43,7 @@ class bstree
 	int height(treenode *t);
 	int numnodes(treenode *t);
 	int getMin(treenode *t);
+	void printBST(treenode *i, int depth); //called from printBST() without params
 	treenode *root;
 };
 

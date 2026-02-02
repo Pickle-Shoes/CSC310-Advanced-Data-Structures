@@ -49,8 +49,9 @@ int main(int argc, char *argv[])
 			case 5:
 				t.post(); //Post-Order Print
 				break;
-			case 6:	//No 6 command
-				cout << "There is no 6 command!" << endl;
+			case 6:	//print the bst for visual
+				cout << "Binary Search Tree: " << endl;
+				t.printBST();
 				break;
 			case 7: //Number of Nodes in Tree
 				cout << "Number of Nodes: " << t.numnodes() << endl;

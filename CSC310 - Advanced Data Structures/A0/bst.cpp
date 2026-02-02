@@ -30,6 +30,32 @@ bstree::bstree()
 	root = NULL;
 }
 
+void bstree::printBST(){
+	if(root == nullptr){
+		return;
+	}
+
+	printBST(root, 0);
+
+}
+
+void bstree::printBST(treenode *i, int depth){
+
+	if(i == nullptr){
+		return;
+	}
+	else{
+	printBST(i->rchild, depth + 1);
+
+	for(int k = 0; k < depth; k++){
+        cout << "  "; //for indentation
+    }
+	cout << i->dat << endl;
+
+	printBST(i->lchild, depth + 1);
+	}
+}
+
 void bstree::in(treenode *t)
 {
 	if(t == NULL)
