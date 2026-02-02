@@ -286,6 +286,23 @@ bool bstree::searchI(int val)
 	return false;
 }
 
+treenode *bstree::searchForNode(int val) //used for returning the node
+{
+	treenode *t = root; //root is the class object of the beginning of the tree
+
+	while(t != NULL) //only keeps going if the node isn't empty
+	{
+		if(t->dat == val)
+			return t;
+		if( val < t->dat)
+			t = t->lchild;
+		else
+			t = t->rchild;
+	}
+
+	return nullptr;
+}
+
 int bstree::numnodes()
 {
 	if(root == NULL)
@@ -318,7 +335,7 @@ int bstree::height(treenode *t)
 		return 0;
 
 	if(t->lchild == NULL && t->rchild == NULL) //am I a leaf node?
-		return 1;
+		return 0;
 
 	int hL, hR;
 	hL = height(t->lchild);
@@ -330,6 +347,18 @@ int bstree::height(treenode *t)
 		return 1 + hR;
 
 	
+}
+
+void bstree::height(int x){ //returns height from a specific node
+	treenode *n = searchForNode(x);
+	if(n != nullptr){
+		int nodeHeight = height(n);
+		cout << "Height of Node: " << nodeHeight << endl;
+	}
+	else{
+		cout << "That node does not exist" << endl;
+	}
+	return;
 }
 
 int bstree::taller()

@@ -29,7 +29,7 @@ class bstree
 	bool search( int x );
 	int numnodes(); // must compute, not a variable in class
 	int height();   // must compute, not a variable in class
-	int height( int x ); // returns the height of a specific node
+	void height( int x ); // returns the height of a specific node
 	int getMin();
 	int taller();
 	void printBST(); //user called
@@ -37,6 +37,7 @@ class bstree
 	void insert(treenode *t, int x);
 	bool searchI(int x);
 	bool searchR(treenode *t, int x);
+	treenode *searchForNode(int val);
 	void in(treenode *t);
 	void pre(treenode *t);
 	void post(treenode *t);

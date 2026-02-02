@@ -68,6 +68,10 @@ int main(int argc, char *argv[])
 				else
 					cout << "Both sides are equal in height." << endl;
 				break;
+			case 10: //height at specific node
+				fscanf(fp, "%d", &readNum);
+				t.height(readNum);
+				break;
 			default: //Default Message
 				cout << "Command " << readNum << " not recognized." << endl;
 		}
