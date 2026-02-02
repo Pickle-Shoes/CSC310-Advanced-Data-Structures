@@ -1,5 +1,5 @@
-#ifndef BSTA_H
-#define BSTA_A
+#ifndef BSTHEADER_H
+#define BSTHEADER_A
 
 #include <iostream>
 #include <fstream>

@@ -1,4 +1,4 @@
-#include "bstA.h"
+#include "bstHeader.h"
 
 
 BST::BST(int size){
