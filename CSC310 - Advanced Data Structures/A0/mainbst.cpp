@@ -75,6 +75,14 @@ int main(int argc, char *argv[])
 			case 11: //check if tree is balanced
 				t.isBalanced();
 				break;
+			case 12: //check if tree is in worst case
+				if(t.worstCase()){
+					cout << "The tree is in worst case" << endl;
+				}
+				else {
+					cout << "The tree is not it worst case" << endl;
+				}
+				break;
 			default: //Default Message
 				cout << "Command " << readNum << " not recognized." << endl;
 		}

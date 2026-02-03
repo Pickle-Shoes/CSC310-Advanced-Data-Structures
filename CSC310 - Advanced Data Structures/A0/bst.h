@@ -34,6 +34,8 @@ class bstree
 	int taller();
 	void printBST(); //user called
 	bool isBalanced(); //checks if tree is balanced
+	bool worstCase(); //checks if tree is in worst case
+	void traverseAll();
  private:
 	void insert(treenode *t, int x);
 	bool searchI(int x);
@@ -46,6 +48,7 @@ class bstree
 	int numnodes(treenode *t);
 	int getMin(treenode *t);
 	void printBST(treenode *i, int depth); //called from printBST() without params
+	void traverseAll(treenode *t); //traverses all the nodes to see if the tree is in the worst case
 	treenode *root;
 
 };

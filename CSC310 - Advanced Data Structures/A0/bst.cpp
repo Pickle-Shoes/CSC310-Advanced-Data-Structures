@@ -4,6 +4,7 @@ using namespace std;
 
 #include "bst.h"
 
+int cFlag = 0;
 
 
 // allocate a new node
@@ -148,6 +149,11 @@ void bstree::remove(int val)
 
 	if(root == NULL)
 		return;
+	
+	if(search(val) == false){ //node does not exist
+		cout << "Node does not exist" << endl;
+		return;
+	}
 
 	if(walk->dat == val) //The Val is the Root Node
 	{
@@ -406,6 +412,47 @@ bool bstree::isBalanced(){
 	else{
 		cout << "Tree is not balanced" << endl;
 		return false;
+	}
+
+}
+
+void bstree::traverseAll(){
+	if(root == nullptr){ //check if tree exists
+		cFlag = 0;
+		return;
+	}
+
+	traverseAll(root);
+	return;
+}
+
+void bstree::traverseAll(treenode *t){
+
+	if(t->lchild == nullptr && t->rchild == nullptr){ //leaf node
+		return;
+	}
+	if(t->lchild != nullptr && t->rchild == nullptr){ //there is a left child but no right
+		traverseAll(t->lchild);
+	}
+	else if(t->rchild != nullptr && t->lchild == nullptr){ //there is a right but no left
+		traverseAll(t->rchild);
+	}
+	if(t->lchild != nullptr && t->rchild != nullptr){ //there is a left and right child
+		cFlag = 0;
+		return;
+	}
+	
+	return;
+}
+
+bool bstree::worstCase(){
+	cFlag = 1; //assume its in worst case until its proven not
+	traverseAll();
+	if(cFlag == 0){ 
+		return false;
+	}
+	else{
+		return true;
 	}
 
 }
