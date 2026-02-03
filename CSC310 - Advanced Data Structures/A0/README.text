@@ -1,0 +1,11 @@
+About: Assingment 0, Review of binary search trees
+Date: Febuary 2, 2026
+Comments: Includes 5 files -> bst.cpp, mainbst.cpp, bst.h, input.txt, Makefile
+
+*** FIRST OPEN THE FOLDER WHERE THESE 5 FILES ARE LOCATED:
+    In command prompt:
+        cd  -> CSC310 - Advanced Data Structures -> A0
+        code .
+***
+To compile A0: Make
+To run bstA: ./bst.out input.txt
